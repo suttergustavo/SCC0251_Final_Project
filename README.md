@@ -19,7 +19,7 @@ To performe de super resolution task this data is use to generate two dataset on
 
 | Exemple HR| Exemple LR |
 |--|--|
-| ![enter image description here]() | ![enter image description here] ()|
+| ![enter image description here](image/example_HR.png) | ![enter image description here] (image/example_LR.png)|
 
 
 
