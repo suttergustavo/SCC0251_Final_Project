@@ -1,4 +1,3 @@
-
 # SCC0251 Image Processing - Final Project
 
 **Students:**
@@ -17,9 +16,6 @@ The [CelebA Dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) will be u
 
 To performe de super resolution task this data is use to generate two dataset one with high resolution (HR) and the other with low resolution (LR). The LR dataset is obtained by downscaling the original images by a factor of two, while the HR dataset contains the original images.
 
-| Exemple HR| Exemple LR |
+| Example HR| Example LR |
 |--|--|
-| ![enter image description here](image/example_HR.png) | ![enter image description here] (image/example_LR.png)|
-
-
-
+| ![enter image description here](images/example_HR.png) | ![enter image description here](images/example_LR.png)|
