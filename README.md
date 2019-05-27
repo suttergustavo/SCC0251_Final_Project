@@ -19,3 +19,23 @@ To performe de super resolution task this data is use to generate two dataset on
 | Example HR| Example LR |
 |--|--|
 | ![enter image description here](images/example_HR.png) | ![enter image description here](images/example_LR.png)|
+
+
+### End-to-end super resolution neural network
+
+As mentioned, the goal of this project is to build a convolutional neural network capable of increasing the quality of an image that is given as an input. The approach proposed is end-to-end, that is, the mapping from the LR image to the HR image is done only by the neural network. The only necessary pre-processing is to upscale the LR image to the desired size using an interpolation method. 
+
+The following diagram demonstrates how this process works
+
+<p align="center"> 
+<img src="images/dip_flow.png">
+</p>
+
+
+#### Neural network architecture
+
+
+#### Training the neural network
+
+
+
