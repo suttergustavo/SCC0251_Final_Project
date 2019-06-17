@@ -7,17 +7,16 @@ from model import Net
 
 print("CUDA Available: ",torch.cuda.is_available())
 use_cuda = torch.cuda.is_available()
-device = torch.device("cuda" if (use_cuda and torch.cuda.is_available()) else "cpu")
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-
-train_folder = '' 
+train_folder = '../img_align_celeba/'
 val_folder = ''
 batch_size = 64
 epochs = 20
 learning_rate = 1e-3
 
 train_set = CelebADataset(root_dir=train_folder, factor=2, n_samples=5000)
-val_set = CelebADataset(root_dir=val_folder, factor=2, n_samples=1000)
+# val_set = CelebADataset(root_dir=val_folder, factor=2, n_samples=1000)
 
 train_loader = DataLoader(train_set, batch_size=batch_size)
 
@@ -37,5 +36,7 @@ for epoch in range(epochs):
         loss.backward()
         optimizer.step()
 
-        if i % 1000:
-            print(f'{epoch} {i}: {loss.item()}')
+    print(f'Epoch {epoch} - Loss: {loss.item()}')
+
+
+torch.save(net.state_dict(), 'weights.pth')
