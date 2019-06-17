@@ -80,7 +80,7 @@ sudo pip3 install numpy
 # kaggle
 sudo pip3 install kaggle
 # pytorch
-sudo pip3 install pytorch
+sudo pip3 install torch
 # torchvision
 sudo pip3 install torchvision
 # matplotlib
