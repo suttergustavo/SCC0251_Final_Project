@@ -1,3 +1,8 @@
+import os
+from torch.utils.data import Dataset
+from torchvision import transforms
+from PIL import Image
+
 class CelebADataset(Dataset):
   def __init__(self, root_dir, factor, n_samples):
     self.root_dir = root_dir
@@ -10,8 +15,7 @@ class CelebADataset(Dataset):
   def __getitem__(self, idx):
     img_name = os.path.join(self.root_dir, f'{idx:06d}.jpg')
     
-    original_image =Image.open(img_name)
-    
+    original_image = Image.open(img_name)
     
     img_shape = list(original_image.size)
     img_shape[0], img_shape[1] = img_shape[1], img_shape[0]
@@ -21,7 +25,6 @@ class CelebADataset(Dataset):
         transforms.Resize(img_shape, interpolation=2),
         transforms.ToTensor()
     ])
-    
     
     degrated_image = tsfrm(original_image)
     original_image = transforms.ToTensor()(original_image)
