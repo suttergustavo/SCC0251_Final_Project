@@ -26,8 +26,6 @@ optimizer = optim.Adam(net.parameters())
 loss_history = []
 
 for epoch in range(epochs):
-    running_loss = 0
-    count = 0
     for i, (inputs, targets) in enumerate(train_loader):
         inputs, targets = inputs.to(device), targets.to(device)
 
@@ -39,12 +37,9 @@ for epoch in range(epochs):
         loss.backward()
         optimizer.step()
         
-        running_loss += loss.item()
-        count += 1
+        loss_history.append(loss.item())
 
-
-    print(f'Epoch {epoch} - Loss: {running_loss/count}')
-    loss_history.append(running_loss/count)
+    print(f'Epoch {epoch} - Loss: {loss.item()}')
 
 
 loss_history = np.array(loss_history)
