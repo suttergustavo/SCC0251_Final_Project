@@ -42,7 +42,8 @@ for epoch in range(epochs):
         running_loss += loss.item()
         count += 1
 
-    print(f'Epoch {epoch} - Loss: {loss.item()}')
+
+    print(f'Epoch {epoch} - Loss: {running_loss/count}')
     loss_history.append(running_loss/count)
 
 
