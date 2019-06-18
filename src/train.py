@@ -13,7 +13,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 train_folder = '../data/train'
 batch_size = 64
 epochs = 20
-learning_rate = 1e-3
+learning_rate = 1e-4
 
 train_set = CelebADataset(root_dir=train_folder, factor=2, n_samples=5000)
 
@@ -26,8 +26,6 @@ optimizer = optim.Adam(net.parameters())
 loss_history = []
 
 for epoch in range(epochs):
-    running_loss = 0
-    count = 0
     for i, (inputs, targets) in enumerate(train_loader):
         inputs, targets = inputs.to(device), targets.to(device)
 
@@ -38,9 +36,6 @@ for epoch in range(epochs):
         
         loss.backward()
         optimizer.step()
-
-        running_loss += loss.item()
-        count += 1
 
     print(f'Epoch {epoch} - Loss: {loss.item()}')
     loss_history.append(running_loss/count)
