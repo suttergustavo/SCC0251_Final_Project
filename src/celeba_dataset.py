@@ -4,7 +4,7 @@ from torchvision import transforms
 from PIL import Image
 
 class CelebADataset(Dataset):
-  def __init__(self, root_dir, factor, n_samples, interpolation=2):
+  def __init__(self, root_dir, factor, n_samples, interpolation=3):
     self.root_dir = root_dir
     self.n_samples = n_samples
     self.factor = factor
