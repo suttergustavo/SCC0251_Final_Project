@@ -9,8 +9,8 @@ print("CUDA Available: ",torch.cuda.is_available())
 use_cuda = torch.cuda.is_available()
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-train_folder = '../img_align_celeba/'
-val_folder = ''
+train_folder = '../data/train'
+val_folder = '../data/val'
 batch_size = 64
 epochs = 20
 learning_rate = 1e-3
