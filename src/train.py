@@ -22,7 +22,7 @@ train_loader = DataLoader(train_set, batch_size=batch_size)
 
 net = Net().to(device)
 criterion = nn.MSELoss()
-optimizer = optim.SGD(net.parameters(), lr=learning_rate)
+optimizer = optim.Adam(net.parameters())
 
 for epoch in range(epochs):
     for i, (inputs, targets) in enumerate(train_loader):
