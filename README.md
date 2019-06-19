@@ -65,7 +65,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-To run this project you will first need Python
+You have two options to run this program first is to run the notebooks, you could use Jupyter or [Colab](https://colab.research.google.com/) from Google the other option is to run the raw scripts. For Colab you won't need to download any prerquisite. For the other options you will first need Python and [CUDA](https://developer.nvidia.com/cuda-10.0-download-archive).
 
 To install via terminal
 ```
@@ -91,20 +91,18 @@ sudo pip3 install scikit-image
 sudo pip3 install pillow
 ```
 
-You will need a program to run .ipynb formats you could use Jupyter or [Colab](https://colab.research.google.com/) from Google
+At last you will need Jupyter if you will run the notebooks.
 ```
 sudo pip3 install jupyter
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Download the repository from Github then open the file [conv_net_approach.ipynb](notebooks/conv_net_approach.ipynb)
+Download the repository from Github and you are good to go.
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+Open the notebook [conv_net_approach.ipynb](notebooks/conv_net_approach.ipynb) on your environment or run the script [train.py](src/train.py) to train the model.
 
 ## Contributing
 
