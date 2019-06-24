@@ -17,9 +17,10 @@ The [CelebA Dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) [1] will 
 
 To performe the super resolution task this data is used to generate two datasets: one with high resolution (HR) and the other with low resolution (LR). The LR dataset is obtained by downscaling the original images by a factor of two, while the HR dataset contains the original images.
 
+
 | Example HR| Example LR |
 |--|--|
-| ![high resolution image of an japanese executive](images/example_HR.jpg) | ![low resolution image of an japanese executive](images/example_LR.jpg)|
+| ![high resolution image example](images/example_HR.jpg) | ![low resolution image example](images/example_LR.jpg)|
 
 ### End-to-end super resolution neural network
 
