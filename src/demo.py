@@ -4,7 +4,6 @@ import torch.nn as nn
 import torch.optim as optim
 from model import Net
 from celeba_dataset import CelebADataset
-from torchvision.utils import make_grid
 import numpy as np
 import matplotlib.pyplot as plt
 
