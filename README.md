@@ -19,7 +19,7 @@ To performe the super resolution task this data is used to generate two datasets
 
 | Example HR| Example LR |
 |--|--|
-| ![high resolution image of an japanese executive](images/example_HR.png) | ![low resolution image of an japanese executive](images/example_LR.png)|
+| ![high resolution image of an japanese executive](images/example_HR.jpg) | ![low resolution image of an japanese executive](images/example_LR.jpg)|
 
 ### End-to-end super resolution neural network
 
