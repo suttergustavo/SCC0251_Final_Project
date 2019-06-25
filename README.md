@@ -6,6 +6,9 @@
 * **Rodrigo Geurgas Zavarizz** - *9791080* - [rgeurgas](https://github.com/rgeurgas)
 * **Victor Henrique de Souza Rodrigues** - *9791027* - [victorhenrique97](https://github.com/victorhenrique97)
 
+
+**The presentation can be found [here](https://docs.google.com/presentation/d/e/2PACX-1vRccVaF7K2fMoN0YJJupaRFfGf80MWwurky1OHn8cgxpjFztbie4UUkU2EoOP59VM1MjiaGtJpy05lR/pub?start=false&loop=false&delayms=60000)**
+
 **Running the demo**
 ```
 python3 src/demo.py <IMG_PATH>
@@ -24,9 +27,9 @@ The [CelebA Dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) [1] will 
 To performe the super resolution task this data is used to generate two datasets: one with high resolution (HR) and the other with low resolution (LR). The LR dataset is obtained by downscaling the original images by a factor of two, while the HR dataset contains the original images.
 
 
-| Example HR| Example LR |
-|--|--|
-| ![high resolution image example](images/example_HR.jpg) | ![low resolution image example](images/example_LR.jpg)|
+<p align="center"> 
+  <img alt="low resolution and high resolution example" src="images/lr_and_hr.png">
+</p>
 
 ### End-to-end super resolution neural network
 
@@ -82,10 +85,40 @@ The decrease on the loss happenned quite fast, which might indicate that the lea
 
 ### Results obtained
 
+In this section, we will demonstrate the results provided by our model. All examples indicate the RMSE between the original image and between our result and the original image, which is always better in all our tests. For ease of viewing, an area of the image is enlarged so that the details are clearer.
 
+
+<p align="center">
+  <img alt="three images of an man the first is the original image, the second is upscaled using linear interpolation and the thirs one is upscaled using our approach" src="images/final_results/girl.png">
+</p>
+
+An interesting thing about the network is that once the filters are learned they can be applied to images of any size, not necessarily the dimensions that were using during training. The following image shows exactly that:
+
+<p align="center">
+  <img alt="three images of an man the first is the original image, the second is upscaled using linear interpolation and the thirs one is upscaled using our approach" src="images/final_results/john_snow.png">
+</p>
+
+#### Generalization to different domains
+
+Although the model was trained only on face images it is able to perform relatively well on other contexts. The following image demostrates how the algorithm performs on an image of a building, something that it has never seen before.
+
+<p align="center">
+  <img alt="three images of an man the first is the original image, the second is upscaled using linear interpolation and the thirs one is upscaled using our approach" src="images/final_results/building.png">
+</p>
+
+The reason why it works is because the main things that the network is looking for to perform super-resolution are not eyes, noses and other face attributes, but simple image structures, such as edges and curves. This also explains why a relatively shallow architecture gives a good performance.
+
+
+(Other results can be found in [here](http://tiny.cc/icmc-super-res))
 
 ### Conclusion and future work
 
+The results were satisfactory, always improving the result of the LR image
+ giving a lower RMSE. Another great point was the generalization to different contexts, demonstrating that the filters learned by the network were capable of improving the quality of a wide range of images.
+
+ To improve the quality of the model it would be good to test different confiurations of hyperparameters and network architectures. This task is very time and resource consuming, but for sure would result in a better model.
+
+ Finally it would be interest to test how other types of networks such as GANs would perform in this task, given that they do not consider a unique answer, like the MSE used in our approach. That would be benefitial given that more than one solution can be accepted as the HR version of a LR image.
 
 ### References
 
