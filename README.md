@@ -43,7 +43,7 @@ The following diagram demonstrates how this process works
 
 #### Neural network architecture
 
-The network architecture used is fairly simple, containing only tree convoltutional layers, all with 3 x 3 kernels. The specific dimensios of each layer can be seen in the diagram that follows. The preliminary version did not use padding, however it was added to keep the same width and height from the input of the network to it's output.
+The network architecture used is fairly simple [2], containing only tree convoltutional layers, all with 3 x 3 kernels. The specific dimensios of each layer can be seen in the diagram that follows. The preliminary version did not use padding, however it was added to keep the same width and height from the input of the network to it's output.
 
 <p align="center">
   <img alt="first layers is 218x178x3, second layer is 216x176x128, third layer is 214x174x64 and the last layer is 212x172x3" src="images/net_arch_final.png">
