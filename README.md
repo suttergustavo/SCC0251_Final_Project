@@ -72,9 +72,16 @@ Pytorch high level interface for neural network development was also very useful
 
 ### Training the network
 
-The 
+Because of computational constraints the the network was training using only 5000 images for 20 epochs, which may appear to be too small but in fact gives good results. The training of the network consisted on minimizing the mean squared error between the SR image produced by the network and the image used to generate the LR image, that is, the original image. To do so the Adam optimizer with a learning rate of 0.001 was used and converged to as demonstrated on the following graph.
+
+<p align="center">
+  <img alt="training loss history" src="images/loss.png">
+</p>
+
+The decrease on the loss happenned quite fast, which might indicate that the learning rate used was to high. However even when smaller learning rates were used the same thing occured, so the hyperparameter was kept the same. 
 
 ### Results obtained
+
 
 
 ### Conclusion and future work
